@@ -8,6 +8,7 @@ import LoanRequestList from './components/Loans/LoanRequestList';
 import LoanDisbursement from './components/Loans/LoanDisbursement';
 import ContributionRecords from './components/Loans/ContributionRecords';
 import Login from './components/Auth/Login';
+// eslint-disable-next-line
 import CredentialsManagement from './components/Auth/CredentialsManagement';
 import SystemUsageReport from './components/Reports/SystemUsageReport';
 import PerformanceReport from './components/Reports/PerformanceReport';
@@ -22,7 +23,7 @@ function App() {
       <div className="App">
         <Header />
         <Sidebar />
-        <Switch>
+        <Routes>
           <Route path="/login" component={Login} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/users" component={UserList} />
@@ -35,7 +36,7 @@ function App() {
           <Route path="/system-usage-report" component={SystemUsageReport} />
           <Route path="/performance-report" component={PerformanceReport} />
           <Route path="/resolve-bottlenecks" component={BottleneckResolver} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
